@@ -1,0 +1,39 @@
+
+.cabecalho__logo {
+   margin-right: 450px;
+}
+
+.cabecalho__icones {
+    color: #FFFFFF;
+    font-size: 40px;
+    display: flex;
+    margin-right: 3rem;
+}
+
+.fa-brands {
+    margin: 1rem;
+
+}
+
+.fa-brands:hover {
+    color: #FBD87A;
+    cursor: pointer;
+    transition: transform .2s;
+    transform: scale(1.1);
+}
+
+
+.btn {
+    margin-left: 400px;
+    background-color: #FBD87A;
+    color: #000000;
+    text-decoration: none;
+    border: 2px solid transparent;
+    padding: 10px 25px;
+    border-radius: 30px;
+
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}

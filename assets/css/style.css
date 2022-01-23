@@ -1,0 +1,35 @@
+.portfolio {
+    background: linear-gradient( #282828 1000px, #000000 500px, #000000 1900px, #282828 300px);
+    display: grid;
+    grid-template-areas: 
+        "cabecalho"
+        "conteudo"
+        "destaque"
+        "rodape";
+    grid-template-columns: auto;
+    grid-template-rows: 100px 500vh auto 50px;
+}
+
+.cabecalho {
+    background: #000000;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: 100%;
+    align-items: center;
+    justify-items: center;
+}
+
+.conteudo .destaque {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% ;
+    height: calc(500vh - 100px);
+}
+
+.rodape {
+    background-color: #fbd87a;
+    grid-area: rodape;
+    text-align: center;
+    padding: 17px;
+}
+

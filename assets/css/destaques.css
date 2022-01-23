@@ -1,0 +1,563 @@
+/* O destaque está dividido em 3 partes para que o background do body não sobreponha as imagens que ultrapassam as pseudo sessões */
+
+/* primeira parte do destaque */
+.destaque__eder {
+    height: 65%;
+    grid-column: 3 / 6;
+    grid-row: 1 / 8;
+    justify-self: right;
+}
+
+.destaque__forma {
+    width: 100%;
+    grid-column: 1 / 3;
+    grid-row: 2 / 8;
+    margin-top: 50px;
+}
+
+.destaque__nome {
+    grid-column: 2 / 4;
+    grid-row: 2 / 2;
+    text-align: right;
+    padding: 3px 3em 0 0;
+}
+
+.destaque__ederbronson {
+    font-size: 4rem;
+    color: #ffffff;
+}
+
+.destaque__developer {
+    font-size: 3rem;
+    color: #fbd87a;
+}
+
+.destaque__jornalista {
+    font-size: 3rem;
+    color: #ffffff;
+}
+
+.destaque__experiência {
+    font-size: 1.251rem;
+    color: #fbd87a;
+}
+
+/* todos os botões da primeira parte do destaque */
+
+.botao_destaque {
+    grid-column: 3 / 4;
+    grid-row: 3 / 3;
+    justify-self: center;
+    margin: 5px 0 0 0;
+}
+
+.destaque__btn1  {
+    background-color: #FFFFFF;
+    color: #000000;
+    text-decoration: none;
+    border: 2px solid transparent;
+    padding: 10px 25px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.destaque__btn2 {
+    background-color: #fbd87a;
+    color: #000000;
+    text-decoration: none;
+    border: 2px solid transparent;
+    padding: 10px 25px;
+    border-radius: 10px;    
+}
+
+.botao_baixoDestaque {
+    grid-column: 2 / 5;
+    grid-row: 4 / 4;
+    justify-self: right;
+    margin: 80px 50px 0 0;
+    text-align: left;
+}
+
+.baixoDestaque__btn1  {
+    background-color: #FFFFFF;
+    color: #000000;
+    text-decoration: none;
+    border: 2px solid transparent;
+    padding: 20px 60px;
+    border-radius: 10px;
+    margin-right: 50px
+}
+
+.baixoDestaque__btn2 {
+    background-color: #FFFFFF;
+    color: #000000;
+    text-decoration: none;
+    border: 2px solid transparent;
+    padding: 20px 60px;
+    border-radius: 10px; 
+    margin-right: 50px;   
+}
+
+.baixoDestaque__btn3 {
+    background-color: #FFFFFF;
+    color: #000000;
+    text-decoration: none;
+    border: 2px solid transparent;
+    padding: 20px 60px;
+    border-radius: 10px; 
+    margin-right: 50px;   
+}
+
+.baixoDestaque__btn4 {
+    background-color: #FFFFFF;
+    color: #000000;
+    text-decoration: none;
+    border: 2px solid transparent;
+    padding: 20px 60px;
+    border-radius: 10px; 
+    margin-right: 50px;   
+    text-align: right;
+}
+
+/* segunda parte do destaque nomeado como subdestaque */
+
+.subdestaque {
+    grid-column: 2 / 5;
+    grid-row: 5 / 5;
+    text-align: center;
+    padding: 50px 5em 0 0em;
+}
+
+.subdestaque__titulo {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 15px;  
+}
+
+.botao_subdestaque {
+    grid-column: 2 / 5;
+    grid-row: 6 / 6;
+    justify-self: center;
+    margin: -20px 60px 0 0;
+}
+
+/* botões da segunda parte do destaque */
+
+.subdestaque__btn1  {
+    background-color: #FFFFFF;
+    color: #000000;
+    text-decoration: none;
+    border: 2px solid transparent;
+    padding: 10px 25px;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.subdestaque__btn2 {
+    background-color: #FFFFFF;
+    color: #000000;
+    text-decoration: none;
+    border: 2px solid transparent;
+    padding: 10px 25px;
+    border-radius: 20px;     
+}
+
+.subdestaque__eder {
+    height: 500%;
+    grid-column: 0 / 6;
+    grid-row: 8 / 12;
+    margin: 80px 90px 0 -100px;
+} 
+
+/* terceira parte do destaque */
+/* barra de skills */
+
+.skills {
+    grid-column: 4 / 6;
+    grid-row: 9 / 12;
+    margin: 0 0 0 8em;
+}
+
+.skill__name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin: 20px 20px;
+}
+
+.skill__bar {
+    height: 30px;
+    background: #FFFFFF;
+    margin: 0 20px;
+    border-radius: 10pt;
+}
+
+.skill__per {
+    height: 30px;
+    background: #fbd87a;
+    border-radius: 7pt;
+    position: relative;
+    animation: fillBars 5.5s 1;
+}
+
+.skill__per::before {
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background: #fbd87a;
+    border-radius: 5px;
+    font-size: 12px;
+    top: -30px;
+    right: 0;
+    transform: translateX(50%);
+}
+
+.skill__per::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #fbd87a;
+    top: -15px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+    border-radius: 2px;
+}
+
+@keyframes fillBars {
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+/* terceira parte do destaque */
+/* barra de botões quadrado */
+
+.botao__quadrado {
+    grid-column: 1 / 3;
+    grid-row: 9 / 9;
+    margin-top: 80px;
+}
+
+.quadrado__btn1  {
+    background-color: #FFFFFF;
+    color: #000000;
+    text-decoration: none;
+    border: 2px solid transparent;
+    padding: 50px 50px;
+    border-radius: 10px;
+    margin-left: 50px;
+}
+
+.botao__quadrado2 {
+    grid-column: 2 / 3;
+    grid-row: 10 / 10;
+    margin-top: 80px;
+}
+
+.quadrado__btn2 {
+    background-color: #fbd87a;
+    color: #000000;
+    text-decoration: none;
+    border: 2px solid transparent;
+    padding: 50px 50px;
+    border-radius: 10px;     
+}
+
+.botao__quadrado3 {
+    grid-column: 1 / 3;
+    grid-row: 11 / 11;
+    margin-top: 80px;
+}
+
+.quadrado__btn3 {
+    background-color: #fbd87a;
+    color: #000000;
+    text-decoration: none;
+    border: 2px solid transparent;
+    padding: 50px 50px;
+    border-radius: 10px; 
+    margin-left: 50px;
+}
+
+.botao__quadrado4 {
+    grid-column: 2 / 3;
+    grid-row: 12 / 12;
+    margin-top: 80px;
+}
+
+.quadrado__btn4 {
+    background-color: #FFFFFF;
+    color: #000000;
+    text-decoration: none;
+    border: 2px solid transparent;
+    padding: 50px 50px;
+    border-radius: 10px; 
+}
+
+.texto__mandela {
+    grid-column: 3 / 4;
+    grid-row: 11 / 11;
+}
+
+.mandela__virgula {
+    color: #ffffff;
+    font-size: 5rem;
+}
+
+.mandela__titulo {
+    color: #fbd87a;
+    font-size: 1.567rem;
+    text-align: right;
+}
+
+.mandela__autor {
+    color: #ffffff;
+    font-size: 1.234rem;
+    text-align: right;
+    margin-top: 30px;
+}
+
+/* terceira parte do destaque */
+/* barra de botões de experiência */
+
+.numeros__experiências {
+    grid-column: 2 / 5;
+    grid-row: 14 / 14;
+    background: #fbd87a;
+    height: 120px;
+    margin-top: -90px;
+    border-radius: 50px;
+}
+
+.base__numeros {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    
+}
+
+.base__92 {
+    color: #ffffff;
+    font-size: 4rem;
+}
+
+.base__15 {
+    color: #ffffff;
+    font-size: 4rem;
+}
+
+.base__26 {
+    color: #ffffff;
+    font-size: 4rem;
+}
+
+.base__frases {
+    display: flex;
+    justify-content: space-around;
+}
+
+.base__clientes {
+    color: #000000;
+    font-size: 1.356rem;
+}
+
+.base__anos {
+    color: #000000;
+    font-size: 1.356rem;
+}
+
+.base__projetos {
+    color: #000000;
+    font-size: 1.356rem;
+}
+
+/* quarta parte do destaque */
+/* barra de blog */
+
+.blog {
+    background: #000000;
+    grid-column: 1 / 6;
+    grid-row: 14 / 19;
+    margin-top: 100px;
+}
+
+.blog__titulo {
+    color: #fbd87a;
+    font-size: 4rem;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.blog__subtitulo {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.blog__btn {
+    background-color: #FFFFFF;
+    color: #000000;
+    text-decoration: none;
+    border: 2px solid transparent;
+    padding: 30px 100px;
+    border-radius: 30px; 
+    margin-left: 1500px;
+    margin-right: 50px;
+    margin-top: -105px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 2rem;
+}
+
+.box__blog {
+    margin-left: 150px;
+    margin-top: 130px;
+}
+
+
+.box__b1 {
+    margin-left: 50px;
+    margin-top: 80px;
+}
+
+.categoria__blog--1 {
+    background-color: #FFFFFF;
+    border-radius: 3px;
+    color: #000000;
+    padding: 5px;
+    width: 5%;
+    text-align: center;
+}
+
+.blog__btn1 {
+    background-color: #282828;
+    color:#ffffff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-left: 280px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.box__b2 {
+    margin-left: 600px;
+    margin-top: -490px;
+}
+
+.categoria__blog--2 {
+    background-color: #FFFFFF;
+    border-radius: 3px;
+    color: #000000;
+    padding: 5px;
+    width: 7%;
+    text-align: center;
+}
+
+.blog__btn2 {
+    background-color: #282828;
+    color:#ffffff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-left: 280px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+.box__b3 {
+    margin-left: 1150px;
+    margin-top: -490px;
+}
+
+.categoria__blog--3 {
+    background-color: #FFFFFF;
+    border-radius: 3px;
+    color: #000000;
+    padding: 5px;
+    width: 15%;
+    text-align: center;
+}
+
+.blog__btn3 {
+    background-color: #282828;
+    color:#ffffff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-left: 280px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.data__blog {
+    color: #fbd87a;
+    font-size: 1.467rem;
+    padding: 10px;
+    margin-left: 60px;
+}
+
+.titulo__blog {
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+/* quinta parte do destaque */
+/* bloco do rodapé */
+
+.contato {
+    display: grid;
+    grid-column: 2 / 5;
+    grid-row: 19 / 21;
+    background-color: #000000;
+    margin-top: 100px;
+    border-radius: 20px;
+}
+
+.logo__rodape {
+    margin-left: 500px;
+    margin-top: 30px;
+}
+
+.titulo__rodape {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-left: 430px;
+}
+
+.subtitulo__rodape {
+    color: #ffffff;
+    font-size: 1.456rem;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.info__subtitulo--rodape {
+    color: #fbd87a;
+    font-size: 1.256rem;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px; 
+}
+
+.contato__btn {
+    background-color: #fbd87a;
+    text-decoration: none;
+    font-size: 1.567rem;
+    color: #000000;
+    padding: 20px;
+    margin-left: 450px;
+    display: inline-block;
+    margin-top: 80px;
+    width: 150px;
+    height: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 60px;
+}
